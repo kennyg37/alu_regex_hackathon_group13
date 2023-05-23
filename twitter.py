@@ -1,8 +1,10 @@
 import re
+#importing the regular expressions library to allow us to use regular expressions
 
 twitter = input("Enter your Twitter username: ")
 pattern = r"@(\w+)"
 match = re.search(pattern, twitter)
+#prompt the user to input their username and match our regular expression with their input
 
 if match:
     print("Your username {} is a valid username.".format(twitter))
@@ -20,3 +22,4 @@ else:
         print("Your username will not change.")
     else: 
         print("Invalid selection.")
+#if statement that checks if it matches and if it does not it prompts the user to change their username
